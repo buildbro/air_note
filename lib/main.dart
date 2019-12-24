@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Air Note',
       theme: ThemeData(
         // This is the theme of your application.
         primarySwatch: Colors.blue,
@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: () async {
           await _addNoteDialog(context);
         },
-        tooltip: 'Increment',
+        tooltip: 'Add note',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
@@ -117,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () {
               notes.add(<String, dynamic> {
                 'body': noteText,
-                'id': "1"
+                'id': "1" //nothing serious
               });
               Navigator.of(context).pop();
             },
